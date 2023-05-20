@@ -125,6 +125,7 @@ html {
     left: 0;
     animation: fadeIn linear 0.3s;
     display: none;
+    z-index: 10;
 }
 
 .modal.open {

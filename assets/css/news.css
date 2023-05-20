@@ -1,28 +1,29 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.img--left{
+.img--left {
     max-width: 286px;
     max-height: 62px;
     margin-right: 20px;
 }
-.img--right{
-margin-left: 20px;
-max-width: 728px;
-height: 90px;
+
+.img--right {
+    margin-left: 20px;
+    max-width: 728px;
+    height: 90px;
 }
 
-.header--one{
+.header--one {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 146px;
 }
 
-.header--two{
+.header--two {
     width: 100%;
     background: #00483e;
     height: 48px;
@@ -30,7 +31,7 @@ height: 90px;
     color: #fff;
 }
 
-.header--two ul{
+.header--two ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -40,19 +41,19 @@ height: 90px;
     align-items: center;
 }
 
-.container--one img{
-width: 1086px;
-height: 580px;
+.container--one img {
+    width: 1086px;
+    height: 580px;
 }
 
-.container--one{
+.container--one {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
-.hinh--trai{
+.hinh--trai {
     background-image: url(https://cdn1.hoanghamobile.com/tin-tuc/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-at-09.31.33-356x220.jpeg);
     background-repeat: no-repeat;
     width: 356px;
@@ -66,38 +67,38 @@ height: 580px;
     margin-right: 2px;
 }
 
-.hinh{
-width: 100%;
-display: flex;
-justify-content: center;
+.hinh {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.hinh-phai{
-background-image: url(https://cdn1.hoanghamobile.com/tin-tuc/wp-content/uploads/2023/04/333-356x220.png);
-background-repeat: no-repeat;
-width: 356px;
-height: 220px;
-display: flex;
-justify-content: center;
-align-items: end;
-color: #fff;
-font-size: 20px;
-font-weight: 600;
+.hinh-phai {
+    background-image: url(https://cdn1.hoanghamobile.com/tin-tuc/wp-content/uploads/2023/04/333-356x220.png);
+    background-repeat: no-repeat;
+    width: 356px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.container--two{
+.container--two {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
-.container--two__right{
+.container--two__right {
     width: 372px;
     padding: 0 24px;
 }
 
-span{
+span {
     background-color: #249982;
     padding: 7px 12px 4px;
     color: #fff;
@@ -105,7 +106,7 @@ span{
     top: 9px;
 }
 
-button{
+button {
     border: none;
     background-color: #249982;
     width: 115px;
@@ -115,91 +116,57 @@ button{
     border-radius: 5px;
 }
 
-.ketnoi{
+.ketnoi {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 55px;
 }
 
-.ketnoi div{
+.ketnoi div {
     width: 98px;
     height: 104px;
     display: flex;
     justify-content: center;
     align-items: center;
-   text-align: center;
-   color: #fff;
+    text-align: center;
+    color: #fff;
 }
 
-.one{
+.one {
     background-color: #516eab;
 }
 
-.two{
+.two {
     background-color: #516eab;
 }
 
-.three{
+.three {
     background-color: #e14e42;
 }
 
-.baiviet{
+.baiviet {
     display: flex;
     margin-top: 30px;
 }
 
-.baiviet h7{
+.baiviet h7 {
     color: #aaaabd;
-    margin-left: 15px;  
+    margin-left: 15px;
 }
 
-.baiviet img{
+.baiviet img {
     width: 100px;
     height: 70px;
 }
 
-.danhgia{
+.danhgia {
     display: flex;
     align-items: center;
     margin-top: 12px;
 }
 
-.danhgia a{
-   background-color: black;
-    color: #fff;
-    padding: 3px;
-    box-sizing: border-box;
-    font-size: 12px;
-}
-
-.danhgia small{
-    padding-left: 20px;
-    color: #aaaabd;
-}
-
-.tintuc{
-    width: 696px;
-    margin-top: 40px;
-    display: flex; 
-    color: #aaaabd;;
-}
-
-.tintuc div{
- margin-left: 20px;
-}
-
-.tintuc h3{
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.tintuc img{
-    width: 218px;
-    height: 150px;
-}
-
-.tintuc a{
+.danhgia a {
     background-color: black;
     color: #fff;
     padding: 3px;
@@ -207,13 +174,48 @@ button{
     font-size: 12px;
 }
 
-.footer{
+.danhgia small {
+    padding-left: 20px;
+    color: #aaaabd;
+}
+
+.tintuc {
+    width: 696px;
+    margin-top: 40px;
+    display: flex;
+    color: #aaaabd;
+    ;
+}
+
+.tintuc div {
+    margin-left: 20px;
+}
+
+.tintuc h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.tintuc img {
+    width: 218px;
+    height: 150px;
+}
+
+.tintuc a {
+    background-color: black;
+    color: #fff;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.footer {
     width: 100%;
     background: #222222;
     padding-bottom: 75px;
 }
 
-.footer--one{
+.footer--one {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -221,25 +223,26 @@ button{
     margin-top: 40px;
 }
 
-h4{
-    color:#fff ;
+h4 {
+    color: #fff;
     margin-bottom: 50px;
 }
-.xemnhieu{
+
+.xemnhieu {
     display: flex;
     justify-content: space-between;
     color: #aaaabd;
 }
 
-.f{
+.f {
     width: 250px;
 }
 
-.xemnhieu ul{
+.xemnhieu ul {
     list-style: none;
 }
 
-.baivietTB{
+.baivietTB {
     display: flex;
     margin-bottom: 30px;
     color: #aaaabd;
@@ -249,16 +252,16 @@ h4{
     width: 201px;
 }
 
-.baivietTB h7{
+.baivietTB h7 {
     margin-left: 23px;
 }
 
-.baivietTB .danhgia a{
+.baivietTB .danhgia a {
     background-color: #00483e;
     padding: 3px;
 }
 
-.xemnhieu ul li{
+.xemnhieu ul li {
     margin-bottom: 18px;
 }
 
@@ -271,31 +274,31 @@ hr {
     border: none;
     background-color: #393939;
 }
- 
-.footer--two{
+
+.footer--two {
     display: flex;
     justify-content: space-around;
     margin-top: 100px;
 }
 
-.footer--two__left img{
+.footer--two__left img {
     width: 231px;
     height: 50px;
 }
 
-.footer--two__center{
+.footer--two__center {
     width: 417px;
 }
 
-.footer--two__center h4{
+.footer--two__center h4 {
     margin-bottom: 25px;
 }
 
-.footer--two__center p{
+.footer--two__center p {
     color: #aaaabd;
 }
 
-.end{
+.end {
     height: 36px;
     width: 100%;
     background-color: #0d0d0d;
@@ -306,15 +309,15 @@ hr {
     font-size: 15px;
 }
 
-.tintuc:hover h3{
+.tintuc:hover h3 {
     color: #249982;
 }
 
-.baiviet:hover h7{
+.baiviet:hover h7 {
     color: #249982;
 }
 
-.baivietTB:hover h7{
+.baivietTB:hover h7 {
     color: #249982;
 }
 

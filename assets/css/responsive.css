@@ -178,7 +178,7 @@
 
     .list-supplier-nav {
         padding: 0 20px;
-        max-width: 58%;
+        max-width: 70%;
     }
 
     /* Trang chi tiet san pham */
@@ -208,5 +208,14 @@
 
     .auth-form {
         padding: 0 8px;
+        max-width: 370px;
+    }
+
+    .auth-form__container {
+        padding: 0 6px;
+    }
+
+    .auth-form__socials-title {
+        margin: 0 2px;
     }
 }
