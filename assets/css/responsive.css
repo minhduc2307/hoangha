@@ -151,6 +151,10 @@
         padding: 0 14px;
     }
 
+    .home-product-item__note-txt {
+        margin-top: 3px;
+    }
+
     .page-content-heading {
         line-height: 2.4rem;
     }
