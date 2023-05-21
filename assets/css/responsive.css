@@ -152,7 +152,7 @@
     }
 
     .home-product-item__note {
-        padding: 5px;
+        display: none;
     }
 
     .page-content-heading {
