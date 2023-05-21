@@ -1739,7 +1739,7 @@
     padding: 2px;
     position: fixed;
     top: 45%;
-    margin-left: -80px;
+    margin-left: -75px;
 }
 
 .social__list {
@@ -2116,7 +2116,7 @@ small{
     top: 0;
     left: 0;
     bottom: 0;
-    width: 300px;
+    width: 290px;
     max-width: 100%;
     background-color: #fff;
     z-index: 3;
