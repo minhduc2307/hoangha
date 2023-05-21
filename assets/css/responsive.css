@@ -151,8 +151,8 @@
         padding: 0 14px;
     }
 
-    .home-product-item__note-txt {
-        margin-top: 3px;
+    .home-product-item__note {
+        padding: 5px;
     }
 
     .page-content-heading {
