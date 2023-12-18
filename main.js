@@ -20,109 +20,109 @@
 
 
 // Form
-var email=document.querySelector('#email');
-var password=document.querySelector('#password');
-var confrimPassword=document.querySelector('#confrim-password');
-var form=document.querySelector('form');
+var email = document.querySelector('#email');
+var password = document.querySelector('#password');
+var confrimPassword = document.querySelector('#confrim-password');
+var form = document.querySelector('form');
 
 
-function showError(input,message){
-    let parent=input.parentElement;
-    let small=parent.querySelector('small');
+function showError(input, message) {
+    let parent = input.parentElement;
+    let small = parent.querySelector('small');
     parent.classList.add('error');
-    small.innerText=message
+    small.innerText = message
 }
-function showSucces(input){
-    let parent=input.parentElement;
-    let small=parent.querySelector('small');
+function showSucces(input) {
+    let parent = input.parentElement;
+    let small = parent.querySelector('small');
     parent.classList.add('error');
-    small.innerText=''
+    small.innerText = ''
 }
-function checkEmptyError(listInput){
-    let isEmptyError=false
-     listInput.forEach(input => {
-        input.value=input.value.trim()
-        if(input.value==''){
-           showError (input,'không được bỏ trống')
-           isEmptyError=true
-        }else{
+function checkEmptyError(listInput) {
+    let isEmptyError = false
+    listInput.forEach(input => {
+        input.value = input.value.trim()
+        if (input.value == '') {
+            showError(input, 'không được bỏ trống')
+            isEmptyError = true
+        } else {
             showSucces(input)
         }
-     });
-     return isEmptyError;
+    });
+    return isEmptyError;
 }
-function checkEmail(input){
+function checkEmail(input) {
     const regexEmail =
-  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    input.value=input.value.trim()
-    let isEmailError=!regexEmail.test(input.value)
-    if(regexEmail.test(input.value)){
+        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    input.value = input.value.trim()
+    let isEmailError = !regexEmail.test(input.value)
+    if (regexEmail.test(input.value)) {
         showSucces(input)
         return true
-    }else{
-        showError(input,'Email không hợp lệ')
+    } else {
+        showError(input, 'Email không hợp lệ')
     }
     return false
 }
-function checklength(input,min,max){
-    input.value=input.value.trim()
-    if(input.value.length<min){
-        showError(input,`phải có ít nhất ${min} ký tự`)
+function checklength(input, min, max) {
+    input.value = input.value.trim()
+    if (input.value.length < min) {
+        showError(input, `phải có ít nhất ${min} ký tự`)
         return true
     }
-    if(input.value.length>max){
-        showError(input,`không được quá  ${max} ký tự`)
+    if (input.value.length > max) {
+        showError(input, `không được quá  ${max} ký tự`)
         return true
     }
     showSucces(input)
     return false
 }
-function checkConfrim(pw,cfpw){
-    if(pw.value!==cfpw.value){
-        showError(cfpw,'không trùng password')
+function checkConfrim(pw, cfpw) {
+    if (pw.value !== cfpw.value) {
+        showError(cfpw, 'không trùng password')
         return true
     }
     return false
 }
-form.addEventListener('submit',function(e){
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-     let isEmptyError = checkEmptyError([email,password,confrimPassword])
-     let isEmailError
-     let checkpasswordlength
-     let checkCF
-    if(email.value!=''){
-        isEmailError=checkEmail(email)
+    let isEmptyError = checkEmptyError([email, password, confrimPassword])
+    let isEmailError
+    let checkpasswordlength
+    let checkCF
+    if (email.value != '') {
+        isEmailError = checkEmail(email)
     }
-    if(password.value!=''){
-        checkpasswordlength=checklength(password,3,16)
+    if (password.value != '') {
+        checkpasswordlength = checklength(password, 3, 16)
     }
-    if(confrimPassword.value!=''){
-        checkCF=checkConfrim(password,confrimPassword)
+    if (confrimPassword.value != '') {
+        checkCF = checkConfrim(password, confrimPassword)
     }
-   
+
 })
 email.addEventListener('blur', () => {
     checkEmptyError([email]);
     let isEmailError
-    if(email.value!=''){
-        isEmailError=checkEmail(email)
-   }
-  });
- password.addEventListener('blur', () => {
+    if (email.value != '') {
+        isEmailError = checkEmail(email)
+    }
+});
+password.addEventListener('blur', () => {
     checkEmptyError([password]);
     let checkpasswordlength
-    if(password.value!=''){
-        checkpasswordlength=checklength(password,3,16)
-   }
-  });
-  confrimPassword.addEventListener('blur', () => {
+    if (password.value != '') {
+        checkpasswordlength = checklength(password, 3, 16)
+    }
+});
+confrimPassword.addEventListener('blur', () => {
     checkEmptyError([confrimPassword]);
     let checkCF
-    if(confrimPassword.value!=''){
-        checkCF=checkConfrim(password,confrimPassword)
+    if (confrimPassword.value != '') {
+        checkCF = checkConfrim(password, confrimPassword)
     }
-  });
+});
 
 const loginBtns = document.querySelectorAll('.js-login')
 const modal = document.querySelector('.js-modal')
