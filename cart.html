@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/cart.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__inner">
+                <nav class="header__navbar">
+                    <ul class="nav__list">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Bản mobile</a>
+                            <a href="#!" class="nav-item__link">Giới thiệu</a>
+                            <a href="#!" class="nav-item__link"
+                                >Sản phẩm đã xem</a
+                            >
+                            <a href="#!" class="nav-item__link"
+                                >Trung tâm bảo hành</a
+                            >
+                            <a href="#!" class="nav-item__link"
+                                >Hệ thống 128 siêu thị</a
+                            >
+                            <a href="#!" class="nav-item__link">Tuyển dụng</a>
+                            <a href="#!" class="nav-item__link"
+                                >Tra cứu đơn hàng</a
+                            >
+                            <a href="#!" class="nav-item__link">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Back navigation -->
+        <div class="container">
+            <a href="index.html" class="navigation__back">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        fill="currentColor"
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                    />
+                </svg>
+                <span class="navigation__back-text">Quay lại</span>
+            </a>
+        </div>
+
+        <main>
+            <section class="cart">
+                <div class="container">
+                    <div class="cart__inner">
+                        <!-- Left -->
+                        <div class="cart__info">
+                            <!-- Cart list -->
+                            <ul class="cart__list">
+                                <!-- Cart item 1 -->
+                                <li class="cart-item">
+                                    <div class="cart-item__media">
+                                        <figure class="cart-item__img-wrap">
+                                            <img
+                                                src="./assets/img/iphone-15-pro.webp"
+                                                alt=""
+                                                class="cart-item__thumb"
+                                            />
+                                        </figure>
+                                        <h3 class="cart-item__name">
+                                            iPhone 15 Pro (128GB) - Chính hãng
+                                            VN/A
+                                        </h3>
+                                        <p class="cart-item__price">
+                                            <strong>25,990,000 ₫</strong>
+                                        </p>
+                                        <span class="control-text"
+                                            >Số lượng</span
+                                        >
+                                        <div class="control__group">
+                                            <button
+                                                class="control__decrease-btn"
+                                            >
+                                                -
+                                            </button>
+                                            <span class="control__number-btn"
+                                                >1</span
+                                            >
+                                            <button
+                                                class="control__increase-btn"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="cart-item__info">
+                                        <!-- Offer list -->
+                                        <ul class="offer__list">
+                                            <!-- Offer item 1 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM1
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Trợ giá lên tới
+                                                        1.000.000đ khi thu cũ
+                                                        đổi mới lên đời iPhone
+                                                        từ iPhone cũ (trừ mã
+                                                        VN/A) và các sản phẩm
+                                                        khác.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 2 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM2
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Trả góp qua Home
+                                                        PayLater giảm tới
+                                                        1.000.000đ.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 3 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM3
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm tới 400.000đ khi
+                                                        mua kèm Microsoft
+                                                        Office/Microsoft 365
+                                                        (Đến hết 30/01/2024).
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 4 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM4
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm 1% tối đa 100.000đ
+                                                        (Áp dụng khi thanh toán
+                                                        100% giá trị đơn hàng
+                                                        qua Zalopay)
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 5 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM5
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        VIB - Nhận Voucher
+                                                        250.000đ khi mở thẻ tín
+                                                        dụng VIB thành công.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 6 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM6
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm sốc 50% giá SIM
+                                                        card khi mua kèm thiết
+                                                        bị.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 7 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM7
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm thêm tới 400.000đ
+                                                        khi mở mới và thanh toán
+                                                        với thẻ TPBank EVO.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Options -->
+                                        <div class="options">
+                                            <div class="options-group">
+                                                <div class="option__storage">
+                                                    <span
+                                                        class="options__title"
+                                                    >
+                                                        Phiên bản
+                                                    </span>
+                                                    <div
+                                                        class="options__type-wrap"
+                                                    >
+                                                        <div
+                                                            class="options-type__decore"
+                                                        ></div>
+                                                        <p
+                                                            class="options__type"
+                                                        >
+                                                            128GB
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="option__color">
+                                                    <span
+                                                        class="options__title"
+                                                    >
+                                                        Màu sắc
+                                                    </span>
+                                                    <div
+                                                        class="options__type-wrap"
+                                                    >
+                                                        <div
+                                                            class="options-type__decore"
+                                                        ></div>
+                                                        <p
+                                                            class="options__type"
+                                                        >
+                                                            Titan Tự Nhiên
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cart-item__delete"></div>
+                                </li>
+
+                                <!-- Cart item 2 -->
+                                <li class="cart-item">
+                                    <div class="cart-item__media">
+                                        <figure class="cart-item__img-wrap">
+                                            <img
+                                                src="./assets/img/s24-ultra-vang.webp"
+                                                alt=""
+                                                class="cart-item__thumb"
+                                            />
+                                        </figure>
+                                        <h3 class="cart-item__name">
+                                            Samsung Galaxy S24 Ultra -
+                                            12GB/256GB - Chính hãng
+                                        </h3>
+                                        <p class="cart-item__price">
+                                            <strong>33,990,000 ₫</strong>
+                                        </p>
+                                        <span class="control-text"
+                                            >Số lượng</span
+                                        >
+                                        <div class="control__group">
+                                            <button
+                                                class="control__decrease-btn"
+                                            >
+                                                -
+                                            </button>
+                                            <span class="control__number-btn"
+                                                >2</span
+                                            >
+                                            <button
+                                                class="control__increase-btn"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="cart-item__info">
+                                        <!-- Offer list -->
+                                        <ul class="offer__list">
+                                            <!-- Offer item 1 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM1
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Trợ giá lên tới
+                                                        1.000.000đ khi thu cũ
+                                                        đổi mới lên đời iPhone
+                                                        từ iPhone cũ (trừ mã
+                                                        VN/A) và các sản phẩm
+                                                        khác.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 2 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM2
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Trả góp qua Home
+                                                        PayLater giảm tới
+                                                        1.000.000đ.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 3 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM3
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm tới 400.000đ khi
+                                                        mua kèm Microsoft
+                                                        Office/Microsoft 365
+                                                        (Đến hết 30/01/2024).
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 4 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM4
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm 1% tối đa 100.000đ
+                                                        (Áp dụng khi thanh toán
+                                                        100% giá trị đơn hàng
+                                                        qua Zalopay)
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 5 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM5
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        VIB - Nhận Voucher
+                                                        250.000đ khi mở thẻ tín
+                                                        dụng VIB thành công.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 6 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM6
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm sốc 50% giá SIM
+                                                        card khi mua kèm thiết
+                                                        bị.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <!-- Offer item 7 -->
+                                            <li class="offer-item">
+                                                <span
+                                                    class="offer-item__number"
+                                                >
+                                                    KM7
+                                                </span>
+                                                <div
+                                                    class="offer-item__content"
+                                                >
+                                                    <div
+                                                        class="offer-item__decore"
+                                                    ></div>
+                                                    <p class="offer-item__desc">
+                                                        Giảm thêm tới 400.000đ
+                                                        khi mở mới và thanh toán
+                                                        với thẻ TPBank EVO.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Options -->
+                                        <div class="options">
+                                            <div class="options-group">
+                                                <div class="option__storage">
+                                                    <span
+                                                        class="options__title"
+                                                    >
+                                                        Phiên bản
+                                                    </span>
+                                                    <div
+                                                        class="options__type-wrap"
+                                                    >
+                                                        <div
+                                                            class="options-type__decore"
+                                                        ></div>
+                                                        <p
+                                                            class="options__type"
+                                                        >
+                                                            128GB/256GB
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="option__color">
+                                                    <span
+                                                        class="options__title"
+                                                    >
+                                                        Màu sắc
+                                                    </span>
+                                                    <div
+                                                        class="options__type-wrap"
+                                                    >
+                                                        <div
+                                                            class="options-type__decore"
+                                                        ></div>
+                                                        <p
+                                                            class="options__type"
+                                                        >
+                                                            Màu Xám
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cart-item__delete"></div>
+                                </li>
+                            </ul>
+
+                            <!-- Cart total -->
+                            <div class="cart__total">
+                                <p class="cart__total-value">
+                                    Tổng giá trị:
+                                    <strong>93,970,000 ₫</strong>
+                                </p>
+                                <p class="cart__total__discount">
+                                    Giảm giá: -00 ₫
+                                </p>
+                                <p class="cart__total-payment">
+                                    Tổng thanh toán:
+                                    <strong>93,970,000 ₫</strong>
+                                </p>
+                                <p class="cart__total-desc">
+                                    Chín mươi ba triệu chín trăm bảy mươi nghìn
+                                    đồng chẵn.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Right -->
+                        <section class="cart__right">
+                            <div class="cart__right-wrap">
+                                <h2 class="section-heading">
+                                    Thông tin đặt hàng
+                                </h2>
+                                <p class="section-desc">
+                                    Bạn cần nhập đầy đủ các trường thông tin có
+                                    dấu *
+                                </p>
+                            </div>
+                            <form class="cart__form" method="post">
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        class="form-input"
+                                        placeholder="Họ và tên *"
+                                        minlength="6"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        class="form-input"
+                                        placeholder="Số điện thoại *"
+                                        pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        class="form-input"
+                                        placeholder="Email *"
+                                    />
+                                </div>
+                                <p class="form-of-receipt">
+                                    Hình thức nhận hàng
+                                </p>
+
+                                <!-- Radio group -->
+                                <div class="form-radio__row">
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="type"
+                                            id="at-home"
+                                            value="at-home"
+                                            hidden
+                                        />
+                                        <label
+                                            for="at-home"
+                                            class="form-radio__label"
+                                        >
+                                            Nhận hàng tại nhà
+                                        </label>
+                                    </div>
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="type"
+                                            id="at-shop"
+                                            value="at-shop"
+                                            hidden
+                                        />
+                                        <label
+                                            for="at-shop"
+                                            class="form-radio__label"
+                                        >
+                                            Nhận hàng tại cửa hàng
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Select group -->
+                                <div class="form-select__row">
+                                    <div class="form-group">
+                                        <select
+                                            name="cities"
+                                            id="citySelect"
+                                            class="form-select"
+                                            required
+                                        >
+                                            <option value="">
+                                                Tỉnh/Thành phố *
+                                            </option>
+                                            <option value="ha-noi">
+                                                Hà Nội
+                                            </option>
+                                            <option value="ho-chi-minh">
+                                                Hồ Chí Minh
+                                            </option>
+                                            <option value="an-giang">
+                                                An Giang
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select
+                                            name="districts"
+                                            id="districtSelect"
+                                            class="form-select"
+                                            required
+                                        >
+                                            <option value="">Cửa hàng *</option>
+                                            <option value="89-tam-trinh">
+                                                89 Tam Trinh, Hoàng Mai, Hà Nội
+                                            </option>
+                                            <option value="194-le-duan">
+                                                194 Lê Duẩn, Hà Nội
+                                            </option>
+                                            <option value="382-nguyen-van-cu">
+                                                382 Nguyễn Văn Cừ, Hà Nội
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Text area -->
+                                <div class="form-group">
+                                    <textarea
+                                        name="note"
+                                        id="note"
+                                        class="form-textarea"
+                                        cols="30"
+                                        rows="5"
+                                        spellcheck="false"
+                                        minlength="15"
+                                        placeholder="Ghi chú"
+                                    ></textarea>
+                                </div>
+
+                                <!-- Submit btn -->
+                                <div class="control-submit__btn">
+                                    <button type="submit" class="form-submit">
+                                        XÁC NHẬN VÀ ĐẶT HÀNG
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
