@@ -575,6 +575,7 @@
                                 </p>
                             </div>
                             <form
+                                id="cart__form"
                                 class="cart__form"
                                 method="post"
                                 action="https://api-gateway.fullstack.edu.vn/action_page.php"
@@ -598,7 +599,6 @@
                                         id="phone"
                                         class="form-input"
                                         placeholder="Số điện thoại *"
-                                        pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
                                         required
                                     />
                                 </div>
@@ -681,7 +681,6 @@
                                             name="shop"
                                             id="shopSelect"
                                             class="form-select"
-                                            required
                                         >
                                             <option value="">Cửa hàng *</option>
                                             <option value="89-tam-trinh">
@@ -776,11 +775,14 @@
                         addressLabel.style.display = "none";
                         personalAddress.style.display = "block";
                         districtSelect.required = true;
+                        shopSelect.required = false;
                     } else if (atShopRadio.checked) {
                         districtSelect.parentElement.style.display = "none";
                         shopSelect.parentElement.style.display = "block";
                         addressLabel.style.display = "block";
                         personalAddress.style.display = "none";
+                        districtSelect.required = false;
+                        shopSelect.required = true;
                     }
                 }
 
@@ -789,6 +791,23 @@
 
                 // Initial check
                 toggleDistrictSelect();
+            });
+        </script>
+
+        <script>
+            //Xoa bo ky tu thua trong text area
+            document.addEventListener("DOMContentLoaded", function () {
+                var form = document.getElementById("cart__form");
+
+                form.addEventListener("submit", function (event) {
+                    var noteTextarea = document.getElementById("note");
+
+                    var cleanedNote = noteTextarea.value
+                        .replace(/\s+/g, " ")
+                        .trim();
+
+                    noteTextarea.value = cleanedNote;
+                });
             });
         </script>
     </body>
