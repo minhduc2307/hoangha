@@ -657,22 +657,13 @@
                                 <div class="form-select__row">
                                     <div class="form-group">
                                         <select
-                                            name="cities"
-                                            id="citySelect"
+                                            name="province"
+                                            id="provinceSelect"
                                             class="form-select"
                                             required
                                         >
                                             <option value="">
                                                 Tỉnh/Thành phố *
-                                            </option>
-                                            <option value="ha-noi">
-                                                Hà Nội
-                                            </option>
-                                            <option value="ho-chi-minh">
-                                                Hồ Chí Minh
-                                            </option>
-                                            <option value="an-giang">
-                                                An Giang
                                             </option>
                                         </select>
                                     </div>
@@ -696,27 +687,12 @@
                                     </div>
                                     <div class="form-group">
                                         <select
-                                            name="districts"
+                                            name="district"
                                             id="districtSelect"
                                             class="form-select"
                                         >
                                             <option value="">
                                                 Quận/Huyện *
-                                            </option>
-                                            <option value="ba-dinh">
-                                                Ba Đình
-                                            </option>
-                                            <option value="hoan-kiem">
-                                                Hoàn Kiếm
-                                            </option>
-                                            <option value="tay-ho">
-                                                Tây Hồ
-                                            </option>
-                                            <option value="long-bien">
-                                                Long Biên
-                                            </option>
-                                            <option value="cau-giay">
-                                                Cầu Giấy
                                             </option>
                                         </select>
                                     </div>
@@ -757,6 +733,8 @@
                 </div>
             </section>
         </main>
+
+        <!-- An hien input -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var atHomeRadio = document.getElementById("at-home");
@@ -794,6 +772,7 @@
             });
         </script>
 
+        <!-- Loai ky tu thua text area -->
         <script>
             //Xoa bo ky tu thua trong text area
             document.addEventListener("DOMContentLoaded", function () {
@@ -809,6 +788,48 @@
                     noteTextarea.value = cleanedNote;
                 });
             });
+        </script>
+
+        <!-- call api lay du lieu quan huyen / thanh pho -->
+        <script>
+            // Fetch dữ liệu từ file JSON và xử lý
+            fetch("data/db.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    var provinceSelect =
+                        document.getElementById("provinceSelect");
+                    var districtSelect =
+                        document.getElementById("districtSelect");
+
+                    // Thêm các tỉnh/thành phố vào select
+                    data.province.forEach(function (province) {
+                        var option = document.createElement("option");
+                        option.text = province.name;
+                        option.value = province.idProvince;
+                        provinceSelect.add(option);
+                    });
+
+                    // Xử lý sự kiện khi chọn tỉnh/thành phố
+                    provinceSelect.addEventListener("change", function () {
+                        // Xóa các option hiện tại của select quận/huyện
+                        districtSelect.innerHTML =
+                            "<option value=''>Chọn quận/huyện</option>";
+
+                        // Lấy id của tỉnh/thành phố được chọn
+                        var selectedProvinceId = provinceSelect.value;
+
+                        // Lọc và thêm các quận/huyện của tỉnh/thành phố được chọn vào select quận/huyện
+                        data.district.forEach(function (district) {
+                            if (district.idProvince === selectedProvinceId) {
+                                var option = document.createElement("option");
+                                option.text = district.name;
+                                option.value = district.idDistrict;
+                                districtSelect.add(option);
+                            }
+                        });
+                    });
+                })
+                .catch((error) => console.error("Error loading data:", error));
         </script>
     </body>
 </html>
