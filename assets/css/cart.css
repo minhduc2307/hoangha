@@ -455,6 +455,13 @@ body {
     margin-top: 15px;
 }
 
+.address-label {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
 .form-group .form-select,
 .form-group .form-textarea {
     width: 204px;

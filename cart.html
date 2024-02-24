@@ -15,7 +15,9 @@
                     <ul class="nav__list">
                         <li class="nav-item">
                             <a href="#!" class="nav-item__link">Bản mobile</a>
-                            <a href="#!" class="nav-item__link">Giới thiệu</a>
+                            <a href="introduce.html" class="nav-item__link"
+                                >Giới thiệu</a
+                            >
                             <a href="#!" class="nav-item__link"
                                 >Sản phẩm đã xem</a
                             >
@@ -49,6 +51,7 @@
             </a>
         </div>
 
+        <!-- Cart -->
         <main>
             <section class="cart">
                 <div class="container">
@@ -571,7 +574,11 @@
                                     dấu *
                                 </p>
                             </div>
-                            <form class="cart__form" method="post">
+                            <form
+                                class="cart__form"
+                                method="post"
+                                action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                            >
                                 <div class="form-group">
                                     <input
                                         type="text"
@@ -632,6 +639,7 @@
                                             name="type"
                                             id="at-shop"
                                             value="at-shop"
+                                            checked
                                             hidden
                                         />
                                         <label
@@ -642,6 +650,8 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <p class="address-label">Nơi nhận hàng</p>
 
                                 <!-- Select group -->
                                 <div class="form-select__row">
@@ -668,8 +678,8 @@
                                     </div>
                                     <div class="form-group">
                                         <select
-                                            name="districts"
-                                            id="districtSelect"
+                                            name="shop"
+                                            id="shopSelect"
                                             class="form-select"
                                             required
                                         >
@@ -685,8 +695,43 @@
                                             </option>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <select
+                                            name="districts"
+                                            id="districtSelect"
+                                            class="form-select"
+                                        >
+                                            <option value="">
+                                                Quận/Huyện *
+                                            </option>
+                                            <option value="ba-dinh">
+                                                Ba Đình
+                                            </option>
+                                            <option value="hoan-kiem">
+                                                Hoàn Kiếm
+                                            </option>
+                                            <option value="tay-ho">
+                                                Tây Hồ
+                                            </option>
+                                            <option value="long-bien">
+                                                Long Biên
+                                            </option>
+                                            <option value="cau-giay">
+                                                Cầu Giấy
+                                            </option>
+                                        </select>
+                                    </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        name="guest-address"
+                                        id="personalAddress"
+                                        class="form-input"
+                                        placeholder="Địa chỉ nhận hàng *"
+                                    />
+                                </div>
                                 <!-- Text area -->
                                 <div class="form-group">
                                     <textarea
@@ -713,5 +758,38 @@
                 </div>
             </section>
         </main>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var atHomeRadio = document.getElementById("at-home");
+                var atShopRadio = document.getElementById("at-shop");
+                var districtSelect =
+                    document.getElementById("districtSelect") ?? "";
+                var shopSelect = document.getElementById("shopSelect");
+                var addressLabel = document.querySelector(".address-label");
+                var personalAddress =
+                    document.querySelector("#personalAddress");
+
+                function toggleDistrictSelect() {
+                    if (atHomeRadio.checked) {
+                        districtSelect.parentElement.style.display = "block";
+                        shopSelect.parentElement.style.display = "none";
+                        addressLabel.style.display = "none";
+                        personalAddress.style.display = "block";
+                        districtSelect.required = true;
+                    } else if (atShopRadio.checked) {
+                        districtSelect.parentElement.style.display = "none";
+                        shopSelect.parentElement.style.display = "block";
+                        addressLabel.style.display = "block";
+                        personalAddress.style.display = "none";
+                    }
+                }
+
+                atHomeRadio.addEventListener("change", toggleDistrictSelect);
+                atShopRadio.addEventListener("change", toggleDistrictSelect);
+
+                // Initial check
+                toggleDistrictSelect();
+            });
+        </script>
     </body>
 </html>
