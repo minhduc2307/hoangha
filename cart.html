@@ -578,7 +578,6 @@
                                 id="cart__form"
                                 class="cart__form"
                                 method="post"
-                                action="https://api-gateway.fullstack.edu.vn/action_page.php"
                             >
                                 <div class="form-group">
                                     <input
@@ -612,91 +611,10 @@
                                         placeholder="Email *"
                                     />
                                 </div>
-                                <p class="form-of-receipt">
+
+                                <!-- <p class="form-of-receipt">
                                     Hình thức nhận hàng
-                                </p>
-
-                                <!-- Radio group -->
-                                <div class="form-radio__row">
-                                    <div class="radio-btn">
-                                        <input
-                                            type="radio"
-                                            name="type"
-                                            id="at-home"
-                                            value="at-home"
-                                            hidden
-                                        />
-                                        <label
-                                            for="at-home"
-                                            class="form-radio__label"
-                                        >
-                                            Nhận hàng tại nhà
-                                        </label>
-                                    </div>
-                                    <div class="radio-btn">
-                                        <input
-                                            type="radio"
-                                            name="type"
-                                            id="at-shop"
-                                            value="at-shop"
-                                            checked
-                                            hidden
-                                        />
-                                        <label
-                                            for="at-shop"
-                                            class="form-radio__label"
-                                        >
-                                            Nhận hàng tại cửa hàng
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <p class="address-label">Nơi nhận hàng</p>
-
-                                <!-- Select group -->
-                                <div class="form-select__row">
-                                    <div class="form-group">
-                                        <select
-                                            name="province"
-                                            id="provinceSelect"
-                                            class="form-select"
-                                            required
-                                        >
-                                            <option value="">
-                                                Tỉnh/Thành phố *
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select
-                                            name="shop"
-                                            id="shopSelect"
-                                            class="form-select"
-                                        >
-                                            <option value="">Cửa hàng *</option>
-                                            <option value="89-tam-trinh">
-                                                89 Tam Trinh, Hoàng Mai, Hà Nội
-                                            </option>
-                                            <option value="194-le-duan">
-                                                194 Lê Duẩn, Hà Nội
-                                            </option>
-                                            <option value="382-nguyen-van-cu">
-                                                382 Nguyễn Văn Cừ, Hà Nội
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select
-                                            name="district"
-                                            id="districtSelect"
-                                            class="form-select"
-                                        >
-                                            <option value="">
-                                                Quận/Huyện *
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
+                                </p> -->
 
                                 <div class="form-group">
                                     <input
@@ -707,6 +625,7 @@
                                         placeholder="Địa chỉ nhận hàng *"
                                     />
                                 </div>
+
                                 <!-- Text area -->
                                 <div class="form-group">
                                     <textarea
@@ -721,6 +640,45 @@
                                     ></textarea>
                                 </div>
 
+                                <p class="payment-label">
+                                    Chọn phương thức thanh toán
+                                </p>
+
+                                <!-- Radio group -->
+                                <div class="form-radio__row">
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="payment"
+                                            id="cod-payment"
+                                            value="cod"
+                                            hidden
+                                            checked
+                                        />
+                                        <label
+                                            for="cod-payment"
+                                            class="form-radio__label"
+                                        >
+                                            COD
+                                        </label>
+                                    </div>
+                                    <div class="radio-btn">
+                                        <input
+                                            type="radio"
+                                            name="payment"
+                                            id="banking-payment"
+                                            value="banking"
+                                            hidden
+                                        />
+                                        <label
+                                            for="banking-payment"
+                                            class="form-radio__label"
+                                        >
+                                            Chuyển khoản
+                                        </label>
+                                    </div>
+                                </div>
+
                                 <!-- Submit btn -->
                                 <div class="control-submit__btn">
                                     <button type="submit" class="form-submit">
@@ -733,44 +691,6 @@
                 </div>
             </section>
         </main>
-
-        <!-- An hien input -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var atHomeRadio = document.getElementById("at-home");
-                var atShopRadio = document.getElementById("at-shop");
-                var districtSelect =
-                    document.getElementById("districtSelect") ?? "";
-                var shopSelect = document.getElementById("shopSelect");
-                var addressLabel = document.querySelector(".address-label");
-                var personalAddress =
-                    document.querySelector("#personalAddress");
-
-                function toggleDistrictSelect() {
-                    if (atHomeRadio.checked) {
-                        districtSelect.parentElement.style.display = "block";
-                        shopSelect.parentElement.style.display = "none";
-                        addressLabel.style.display = "none";
-                        personalAddress.style.display = "block";
-                        districtSelect.required = true;
-                        shopSelect.required = false;
-                    } else if (atShopRadio.checked) {
-                        districtSelect.parentElement.style.display = "none";
-                        shopSelect.parentElement.style.display = "block";
-                        addressLabel.style.display = "block";
-                        personalAddress.style.display = "none";
-                        districtSelect.required = false;
-                        shopSelect.required = true;
-                    }
-                }
-
-                atHomeRadio.addEventListener("change", toggleDistrictSelect);
-                atShopRadio.addEventListener("change", toggleDistrictSelect);
-
-                // Initial check
-                toggleDistrictSelect();
-            });
-        </script>
 
         <!-- Loai ky tu thua text area -->
         <script>
@@ -788,48 +708,6 @@
                     noteTextarea.value = cleanedNote;
                 });
             });
-        </script>
-
-        <!-- call api lay du lieu quan huyen / thanh pho -->
-        <script>
-            // Fetch dữ liệu từ file JSON và xử lý
-            fetch("data/db.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    var provinceSelect =
-                        document.getElementById("provinceSelect");
-                    var districtSelect =
-                        document.getElementById("districtSelect");
-
-                    // Thêm các tỉnh/thành phố vào select
-                    data.province.forEach(function (province) {
-                        var option = document.createElement("option");
-                        option.text = province.name;
-                        option.value = province.idProvince;
-                        provinceSelect.add(option);
-                    });
-
-                    // Xử lý sự kiện khi chọn tỉnh/thành phố
-                    provinceSelect.addEventListener("change", function () {
-                        // Xóa các option hiện tại của select quận/huyện
-                        districtSelect.innerHTML =
-                            "<option value=''>Chọn quận/huyện</option>";
-
-                        // Lấy id của tỉnh/thành phố được chọn
-                        var selectedProvinceId = provinceSelect.value;
-
-                        // Lọc và thêm các quận/huyện của tỉnh/thành phố được chọn vào select quận/huyện
-                        data.district.forEach(function (district) {
-                            if (district.idProvince === selectedProvinceId) {
-                                var option = document.createElement("option");
-                                option.text = district.name;
-                                option.value = district.idDistrict;
-                                districtSelect.add(option);
-                            }
-                        });
-                    });
-                })
-                .catch((error) => console.error("Error loading data:", error));
         </script>
     </body>
 </html>
