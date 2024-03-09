@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order confirmed</title>
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/cart.css" />
+
+        <style>
+            :root {
+                --primary-color: #00483d;
+                --secondary-primary-color: #7fd6cb;
+                --bg-color: #009981;
+                --text-color: #333;
+            }
+
+            .container {
+                width: 1200px;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .order-confirm__container {
+                margin-top: 100px;
+            }
+
+            .content__inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icon-wrap {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                padding: 10px;
+                border: 2px solid #00715f;
+            }
+
+            .icon-check {
+                position: absolute;
+                top: 17px;
+                width: 24px;
+                height: 14px;
+                border-left: 1px solid #005d4e;
+                border-bottom: 1px solid #005d4e;
+                rotate: -45deg;
+            }
+
+            .block-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+            }
+
+            .welcome-text {
+                font-size: 2rem;
+                font-weight: 600;
+                color: var(--text-color);
+            }
+
+            .order-confirm__title {
+                margin-top: 30px;
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: var(--text-color);
+            }
+
+            .order-confirm__desc {
+                width: 400px;
+                margin-top: 20px;
+                font-size: 1.8rem;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            .order-confirm__link {
+                margin-top: 36px;
+                display: inline-block;
+                padding: 24px 50px;
+                background: #008f78;
+                color: #fff;
+                border-radius: 10px;
+            }
+
+            .order-confirm__link:hover {
+                opacity: 0.9;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__inner">
+                <nav class="header__navbar">
+                    <ul class="nav__list">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-item__link">Bản mobile</a>
+                            <a href="introduce.html" class="nav-item__link"
+                                >Giới thiệu</a
+                            >
+                            <a href="#!" class="nav-item__link"
+                                >Sản phẩm đã xem</a
+                            >
+                            <a href="#!" class="nav-item__link"
+                                >Trung tâm bảo hành</a
+                            >
+                            <a href="#!" class="nav-item__link"
+                                >Hệ thống 128 siêu thị</a
+                            >
+                            <a href="#!" class="nav-item__link">Tuyển dụng</a>
+                            <a href="#!" class="nav-item__link"
+                                >Tra cứu đơn hàng</a
+                            >
+                            <a href="#!" class="nav-item__link">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Back navigation -->
+        <div class="container">
+            <a href="javascript:history.back()" class="navigation__back">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        fill="currentColor"
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                    />
+                </svg>
+                <span class="navigation__back-text">Quay lại</span>
+            </a>
+        </div>
+
+        <div class="container order-confirm__container">
+            <div class="content__inner">
+                <div class="icon-wrap">
+                    <div class="icon-check"></div>
+                </div>
+
+                <section class="block-info">
+                    <span class="welcome-text">Xin chào Nguyễn Minh Đức,</span>
+                    <h1 class="order-confirm__title">
+                        Đơn hàng của bạn đã đặt thành công
+                    </h1>
+                    <p class="order-confirm__desc">
+                        Chúng tôi sẽ gửi đơn hàng của bạn đi sớm nhất. Vui lòng
+                        kiểm tra điện thoại khi đơn hàng đang trên đường giao
+                        đến bạn
+                    </p>
+                </section>
+
+                <a href="order.html" class="order-confirm__link">
+                    Kiểm tra trạng thái đơn hàng
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
