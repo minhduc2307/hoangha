@@ -9,10 +9,11 @@
 
         <style>
             :root {
-                --primary-color: #00483d;
-                --secondary-primary-color: #7fd6cb;
-                --bg-color: #009981;
                 --text-color: #333;
+            }
+
+            body {
+                background: #f3f5f4;
             }
 
             .container {
@@ -21,43 +22,26 @@
                 margin: 0 auto;
             }
 
-            .order-confirm__container {
-                margin-top: 100px;
+            .order-decore__img {
+                width: 310px;
+                height: 310px;
             }
 
             .content__inner {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .icon-wrap {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                padding: 10px;
-                border: 2px solid #00715f;
-            }
-
-            .icon-check {
-                position: absolute;
-                top: 17px;
-                width: 24px;
-                height: 14px;
-                border-left: 1px solid #005d4e;
-                border-bottom: 1px solid #005d4e;
-                rotate: -45deg;
+                padding-bottom: 40px;
+                background: #fff;
+                border-radius: 40px;
+                box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
             }
 
             .block-info {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: 30px;
+                margin-top: 4px;
             }
 
             .welcome-text {
@@ -138,11 +122,13 @@
             </a>
         </div>
 
-        <div class="container order-confirm__container">
+        <div class="container">
             <div class="content__inner">
-                <div class="icon-wrap">
-                    <div class="icon-check"></div>
-                </div>
+                <img
+                    src="./assets/img/order-successful.webp"
+                    alt=""
+                    class="order-decore__img"
+                />
 
                 <section class="block-info">
                     <span class="welcome-text">Xin chào Nguyễn Minh Đức,</span>
