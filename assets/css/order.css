@@ -115,21 +115,21 @@ tr.no-border td {
     border: none;
 }
 
+.align-right {
+    text-align: right;
+}
+
 .btn-group {
-    width: 800px;
     display: flex;
     justify-content: space-between;
-    margin: 40px 0;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btn-confirm {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
-    height: 56px;
+    width: 164px;
+    height: 52px;
     line-height: 56px;
     border-radius: 10px;
     font-size: 1.6rem;
@@ -141,15 +141,15 @@ tr.no-border td {
     opacity: 0.9;
 }
 
-.btn-confirm:first-child {
+.btn-confirm--warning {
     background: #6c757d;
 }
 
-.btn-confirm:nth-child(2) {
+.btn-confirm--success {
     background: #198754;
 }
 
-.btn-confirm:last-child {
+.btn-confirm--danger {
     background: #dc3545;
 }
 
