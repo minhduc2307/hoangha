@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order list</title>
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 62.5%;
+            }
+
+            body {
+                font-size: 1.6rem;
+            }
+
+            .content {
+                width: 1200px;
+                max-width: calc(100% - 48px);
+                margin: 0 auto;
+            }
+
+            .order-info__table {
+                margin-top: 16px;
+                width: 100%;
+                font-size: 1.4rem;
+                color: var(--text-color);
+                border-collapse: collapse;
+            }
+
+            .table-product {
+                padding: 5px 8px;
+                border: 1px solid #dedede;
+            }
+
+            .table-product th {
+                color: #fff;
+                background: #009a82;
+            }
+
+            .table-product th,
+            .table-product td {
+                border: 1px solid #dedede;
+                padding: 5px 8px;
+            }
+
+            .table-product th {
+                text-align: center;
+            }
+
+            .table-product td.center-text {
+                text-align: center;
+            }
+
+            .align-td {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            td .bold-text {
+                font-weight: 700;
+            }
+
+            .text-darkgray {
+                color: #888;
+            }
+
+            td .text-red {
+                color: #fd475a;
+                font-weight: 700;
+            }
+
+            tr.no-border,
+            tr.no-border td {
+                border: none;
+            }
+
+            .align-right {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="order-info">
+                <h3 class="order-info__heading">
+                    1. Danh sách sản phẩm đặt hàng
+                </h3>
+                <table class="order-info__table table-product">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Phiên bản</th>
+                            <th>Màu sắc</th>
+                            <th>SL</th>
+                            <th>Giá tiền</th>
+                            <th>Tổng (SLxG)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="6" class="align-td">1</td>
+                            <td>
+                                <strong class="bold-text">
+                                    SIM Local A50S (Không giới hạn dung lượng)
+                                </strong>
+                            </td>
+                            <td class="center-text">Mặc định</td>
+                            <td class="center-text">Mặc định</td>
+                            <td class="center-text">1</td>
+                            <td class="center-text">119,000 đ</td>
+                            <td class="center-text">119,000 đ</td>
+                        </tr>
+                        <tr class="text-darkgray">
+                            <td colspan="6">
+                                KM Trả góp qua Home PayLater giảm tới
+                                1.000.000đ.
+                            </td>
+                        </tr>
+                        <tr class="text-darkgray">
+                            <td colspan="6">
+                                KM VIB - Nhận Voucher 250.000đ khi mở thẻ tín
+                                dụng VIB thành công.
+                            </td>
+                        </tr>
+                        <tr class="text-darkgray">
+                            <td colspan="6">
+                                KM Giảm 5% tối đa 1.000.000đ (đơn hàng từ
+                                3.000.000đ) khi thanh toán qua Kredivo (Áp dụng
+                                từ 01-03/02)
+                            </td>
+                        </tr>
+                        <tr class="text-darkgray">
+                            <td colspan="6">
+                                KM Giảm thêm tới 400.000đ khi mở mới và thanh
+                                toán với thẻ TPBank EVO.
+                            </td>
+                        </tr>
+                        <tr class="text-darkgray">
+                            <td colspan="6">
+                                KM Giảm 1% tối đa 100.000đ (Áp dụng khi thanh
+                                toán 100% giá trị đơn hàng qua Zalopay)
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td colspan="6" class="align-right">Tổng tiền:</td>
+                            <td>119,000 đ</td>
+                        </tr>
+                        <tr class="no-border">
+                            <td colspan="6" class="align-right">
+                                Đã trả trước:
+                            </td>
+                            <td>-119,000 đ</td>
+                        </tr>
+                        <tr class="no-border">
+                            <td colspan="6" class="align-right">Giảm giá:</td>
+                            <td>-00 đ</td>
+                        </tr>
+                        <tr class="no-border">
+                            <td colspan="6" class="align-right">
+                                Tổng tiền thanh toán:
+                            </td>
+                            <td>
+                                <strong class="text-red">119,000 đ</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -63,6 +63,10 @@ body {
     padding: 4px;
 }
 
+td:nth-child(odd) {
+    width: 120px;
+}
+
 .order-info__table-status {
     color: midnightblue;
     font-weight: 700;
