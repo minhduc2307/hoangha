@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Profile</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/profile.css" />
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <h1 class="profile__heading">Thông tin cá nhân</h1>
+                <section class="profile__top">
+                    <div class="profile__top-row">
+                        <figure class="profile__avatar-wrap">
+                            <img
+                                src="./assets/img/avatar.jpg"
+                                alt=""
+                                class="profile__avatar"
+                            />
+                        </figure>
+                        <div class="profile__info">
+                            <h2 class="profile__name">Nguyen Minh Duc</h2>
+                            <p class="profile__email">minhduc@gmail.com</p>
+                            <p class="profile__phone">0987654321</p>
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="#!" class="btn btn__sign-out">
+                                <span>Đăng xuất</span>
+                                <i
+                                    class="fa-solid fa-arrow-right-from-bracket"
+                                ></i>
+                            </a>
+                            <a href="index.html" class="btn back__btn">
+                                Về trang chủ
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <form action="" method="post" class="profile-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full-name" class="form-label">
+                                Họ tên
+                            </label>
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="full-name"
+                                class="form-input"
+                                value="Nguyen Minh Duc"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="user-name" class="form-label">
+                                Tài khoản
+                            </label>
+                            <input
+                                type="text"
+                                id="user-name"
+                                name="user-name"
+                                class="form-input"
+                                value="duc123"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group form-group__special-info">
+                            <label for="email" class="form-label">
+                                Địa chỉ Email
+                            </label>
+                            <i class="fa-regular fa-envelope email-icon"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="form-input"
+                                value="minhduc@gmail.com"
+                            />
+                        </div>
+                        <div class="form-group form-group__special-info">
+                            <label for="phone" class="form-label">
+                                Số điện thoại
+                            </label>
+                            <i class="fa-solid fa-mobile-screen phone-icon"></i>
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                class="form-input"
+                                value="0987654321"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group form-group__password">
+                            <label for="current-password" class="form-label">
+                                Mật khẩu hiện tại
+                            </label>
+                            <i class="fa-solid fa-key password-icon"></i>
+                            <input
+                                type="password"
+                                name="current-password"
+                                id="current-password"
+                                class="form-input"
+                                value="duc123"
+                            />
+                            <div class="show-hide-password">
+                                <i
+                                    class="fa-regular fa-eye"
+                                    onclick="changeTypeCurrentPassword()"
+                                ></i>
+                                <i
+                                    class="fa-regular fa-eye-slash"
+                                    onclick="changeTypeCurrentPassword()"
+                                ></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group__password">
+                            <label for="new-password" class="form-label">
+                                Mật khẩu mới
+                            </label>
+                            <i class="fa-solid fa-key password-icon"></i>
+                            <input
+                                type="password"
+                                name="new-password"
+                                id="new-password"
+                                class="form-input"
+                                value="test123"
+                            />
+                            <div class="show-hide-password">
+                                <i
+                                    class="fa-regular fa-eye"
+                                    onclick="changeTypeNewPassword()"
+                                ></i>
+                                <i
+                                    class="fa-regular fa-eye-slash"
+                                    onclick="changeTypeNewPassword()"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group form-group__password">
+                            <label for="confirm-password" class="form-label">
+                                Xác nhận mật khẩu mới
+                            </label>
+                            <i class="fa-solid fa-key password-icon"></i>
+                            <input
+                                type="password"
+                                name="confirm-password"
+                                id="confirm-password"
+                                class="form-input"
+                                value="test123"
+                            />
+                            <div class="show-hide-password">
+                                <i
+                                    class="fa-regular fa-eye"
+                                    onclick="changeTypeConfirmPassword()"
+                                ></i>
+                                <i
+                                    class="fa-regular fa-eye-slash"
+                                    onclick="changeTypeConfirmPassword()"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__btn-group">
+                        <a href="#!" class="btn form-btn">Hủy</a>
+                        <a href="#!" class="btn form-btn">Lưu</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script>
+            const currentPassword = document.getElementById("current-password");
+            const newPassword = document.getElementById("new-password");
+            const confirmPassword = document.getElementById("confirm-password");
+
+            function changeTypeCurrentPassword() {
+                currentPassword.type =
+                    currentPassword.type == "text" ? "password" : "text";
+            }
+            function changeTypeNewPassword() {
+                newPassword.type =
+                    newPassword.type == "text" ? "password" : "text";
+            }
+            function changeTypeConfirmPassword() {
+                confirmPassword.type =
+                    confirmPassword.type == "text" ? "password" : "text";
+            }
+        </script>
+    </body>
+</html>
